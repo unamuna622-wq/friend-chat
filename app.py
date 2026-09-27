@@ -25,4 +25,5 @@ def get_messages():
     return jsonify(messages)
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
