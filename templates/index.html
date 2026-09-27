@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>My Chat</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+
 <body>
 
     <h1>My Chat</h1>
 
-    <div id="chat">
-        <p>Hello! 👋</p>
+    <div id="username-area">
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter your name"
+        >
+
+        <button onclick="saveUsername()">Start Chat</button>
     </div>
 
-    <input type="text" id="message" placeholder="Type a message">
-    <button onclick="sendMessage()">Send</button>
+    <div id="chat"></div>
+
+    <div id="message-area">
+        <input
+            type="text"
+            id="message"
+            placeholder="Type a message"
+        >
+
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
+
 </html>
